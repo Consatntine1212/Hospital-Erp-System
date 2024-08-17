@@ -1,0 +1,76 @@
+<p>create-appointment works!</p>
+<div>
+  <h1>Chessboard Example</h1>
+  <div class="chessboard" [ngStyle]="{'grid-template-columns': 'repeat(8, 1fr)'}">
+    <div *ngFor="let row of [].constructor(8); let rowIndex = index">
+      <div *ngFor="let col of [].constructor(8); let colIndex = index"
+           [ngStyle]="{'background-color': (rowIndex + colIndex) % 2 === 0 ? 'white' : 'black'}">
+        <!-- Your cell content here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<section class="w3l-contact-1">
+    <div class="contacts-9 section-gap">
+      <div class="wrapper">
+        <h3 class="global-title text-center">Contact us</h3>
+        <div class="d-grid contact-view">
+          <div class="map-content-9">
+            <span class="text-success" *ngIf="model.contactId">Your message is submitted. Reference ID is {{model.contactId}}</span>
+            <div class="appointment-form">
+              <form (ngSubmit)="appointmentForm.valid && saveAppointment(appointmentForm)" #appointmentForm="ngForm">
+                <div class="twice">
+                  <input type="date" class="form-control" name="appointmentsDate" id="appointmentsDate" placeholder="appointments Date" required
+                    [(ngModel)]="model.appointmentsDate" #appointmentsDate="ngModel">
+                  <span class="text-danger" *ngIf="(appointmentsDate.touched || appointmentForm.submitted) &&
+                  appointmentsDate.errors?.['required']">Error: Appointment date is required!</span>
+                </div>
+
+                <div class="twice">
+                  <input type="time" class="form-control" name="appointmentsTime" id="appointmentsTime" placeholder="appointments Time" required
+                    [(ngModel)]="model.appointmentsTime" #appointmentsTime="ngModel">
+                  <span class="text-danger" *ngIf="(appointmentsTime.touched || appointmentForm.submitted) &&
+                  appointmentsTime.errors?.['required']">Error: Appointment time is required!</span>
+                </div>
+
+                <div class="twice">
+                  <input type="number" class="form-control" name="customerId" id="customerId" placeholder="customer Id 1" required
+                    [(ngModel)]="model.customerId" #customerId="ngModel">
+                  <span class="text-danger" *ngIf="(customerId.touched || appointmentForm.submitted) &&
+                  customerId.errors?.['required']">Error: Appointment customer Id is required!</span>
+                </div>
+
+                <div class="twice">
+                  <input type="number" class="form-control" name="secondCustomerId" id="secondCustomerId" placeholder="second CustomerId Id 1" required
+                    [(ngModel)]="model.secondCustomerId" #secondCustomerId="ngModel">
+                  <span class="text-danger" *ngIf="(secondCustomerId.touched || appointmentForm.submitted) &&
+                  secondCustomerId.errors?.['required']">Error: Appointment second Customer Id is required!</span>
+                </div>
+
+                <div class="twice">
+                  <input type="text" class="form-control" name="appointmentsDescription" id="appointmentsDescription" placeholder="appointmentsD escription" required
+                    [(ngModel)]="model.appointmentsDescription" #appointmentsDescription="ngModel">
+                  <span class="text-danger" *ngIf="(appointmentsDescription.touched || appointmentForm.submitted) &&
+                  appointmentsDescription.errors?.['required']">Error: appointments Description is required!</span>
+                </div>
+
+                <div class="twice">
+                  <input type="date" class="form-control" name="createDt" id="createDt" placeholder="create Dt Date" required
+                    [(ngModel)]="model.createDt" #createDt="ngModel">
+                  <span class="text-danger" *ngIf="(createDt.touched || appointmentForm.submitted) &&
+                  createDt.errors?.['required']">Error: Appointment date is required!</span>
+                </div>
+
+
+                <button type="submit" class="btn btn-contact">Send Message</button>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
